@@ -29,7 +29,7 @@ var im_first = 'n';
 
 app.get('/start2', (req, res) => {
  	
-	query();
+	query_inicial();
 	res.status(200);
 	res.send('INICIOU');
 	res.end();
