@@ -1,0 +1,46 @@
+{
+  "name": "robo_acom2",
+  "description": "Third GCP app deployed",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Hugo Levino",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugolevino/robo_acom.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "start": "node app.js",
+    "system-test": "repo-tools test app",
+    "test": "npm run system-test",
+    "e2e-test": "repo-tools test deploy"
+  },
+ "dev": "npm run robo",
+ "dependencies": {
+    "@google-cloud/tasks": "^0.4.0",
+    "@google-cloud/bigquery": "^3.0.0", 
+    "request-promise": "^4.2.4",
+    "request": "^2.88.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "yargs": "^13.0.0"
+  },
+  "devDependencies": {
+    "execa": "^1.0.0",
+    "mocha": "^6.0.0",
+    "uuid": "^3.3.2"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  }
+}
