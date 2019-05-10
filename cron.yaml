@@ -1,4 +1,0 @@
-cron:
-- description: "every 30 minutes"
-  url: /start2
-  schedule: every 30 minutes
